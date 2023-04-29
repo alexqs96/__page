@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@geist-ui/core": "^2.3.8",
-    "@geist-ui/icons": "^1.0.2",
     "@svgr/webpack": "^7.0.0",
     "cookie": "^0.5.0",
     "eslint": "8.39.0",

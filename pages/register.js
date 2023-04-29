@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
-import { Button, Input } from "@geist-ui/core";
 
 const Register = () => {
 
@@ -44,31 +43,34 @@ const Register = () => {
           unoptimized
           priority
         />
-        <Input
-          htmlType="text"
-          width="100%"
-          ref={nameRef}
-        >
+        <label>
           Nombre
-        </Input>
+          <input
+            className="w-full"
+            type="text"
+            ref={nameRef}
+          />
+        </label>    
 
-        <Input
-          htmlType="email"
-          width="100%"
-          ref={emailRef}
-        >
+        <label>
           Email
-        </Input>
+          <input
+            className="w-full"
+            type="email"
+            ref={emailRef}
+          />
+        </label>
 
-        <Input.Password
-          width="100%"
-          ref={passwordRef}
-        >
+        <label>
           Contraseña
-        </Input.Password>
-        <Button htmlType="submit" type="secondary">
-          <span className="font-semibold">Registrarme</span>
-        </Button>
+          <input
+            className="w-full"
+            type="password"
+            ref={passwordRef}
+          />
+        </label>
+        
+        <button type="submit" className="bg-black text-black dark:bg-white dark:text-black font-semibold">Unirme</button>
       </form>
       {
         message?

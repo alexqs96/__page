@@ -1,7 +1,5 @@
 import { useRef, useState, useContext } from "react";
 import Image from "next/image";
-import { AppContext } from "@/context/auth";
-import { Button, Card, Input } from "@geist-ui/core";
 
 const Login = () => {
 
@@ -49,23 +47,25 @@ const Login = () => {
           unoptimized
           priority
         />
-        <Input
-          htmlType="email"
-          width="100%"
-          ref={emailRef}
-        >
+        <label>
           Email
-        </Input>
+          <input
+            className="w-full"
+            type="email"
+            ref={emailRef}
+          />
+        </label>
 
-        <Input.Password
-          width="100%"
-          ref={passwordRef}
-        >
+        <label>
           Contraseña
-        </Input.Password>
-        <Button htmlType="submit" type="secondary">
-          <span className="font-semibold">Iniciar Sesión</span>
-        </Button>
+          <input
+            className="w-full"
+            type="password"
+            ref={passwordRef}
+          />
+        </label>
+        
+        <button type="submit" className="bg-black text-black dark:bg-white dark:text-black font-semibold">Ingresar</button>
       </form>
       {
         message?

@@ -11,20 +11,14 @@ export default function logOut(req, res) {
       });
   }
 
-  const serialized = serialize("pageUser", "", {
+  const serialized = serialize("pageUser", null, {
     httpOnly: true,
-    secure: true,
+    secure: process.env.NODE_ENV === "production",
     sameSite: "strict",
     maxAge: 0,
     path: "/",
-    domain: "https://ejercitolinces.vercel.app",
   });
 
   res.setHeader("Set-Cookie", serialized);
-  res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-  res.setHeader("Pragma", "no-cache");
-  res.setHeader("Expires", "0");
-
   return res.status(200).json(null);
-
 }

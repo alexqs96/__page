@@ -19,7 +19,7 @@ const Header = () => {
         user?
         <>
         <span className="ml-auto mr-4 font-semibold">Hola {user.name}</span>
-        <Link href="/profile"><Image src="/img/logo.png" width={60} height={60} alt="Logo Linx" priority unoptimized/></Link>
+        <Link href="/profile"><Image src={user.profile_pic} className="rounded-full" width={60} height={60} alt="User Pic" priority unoptimized/></Link>
         <span onClick={() => logOut()} className="cursor-pointer text-sm font-medium block text-center w-full py-2 text-gray-500 transition hover:text-black hover:dark:text-white">Cerrar Sesión</span>
         </>
         :
@@ -39,7 +39,7 @@ const Header = () => {
 
 const Footer = () => {
   const { setTheme } = useTheme();
-  
+
   return (
     <>
       <footer className="flex justify-between flex-wrap p-2">

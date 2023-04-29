@@ -15,15 +15,13 @@ export default function logOut(req, res) {
     httpOnly: true,
     secure: true,
     sameSite: "strict",
-    maxAge: -1,
+    maxAge: 0,
     path: "/",
-    domain: process.env.PAGE_URL
+    domain: process.env.PAGE_URL || "localhost",
   });
 
   res.setHeader("Set-Cookie", serialized);
   res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
   res.setHeader("Pragma", "no-cache");
   res.setHeader("Expires", "0");
-  
-  return res.status(200).json(null);
 }

@@ -17,7 +17,7 @@ export const AppProvider = ({ children }) => {
   }
 
   async function logOut() {
-    const data = await fetch("/api/logout", {
+    const data = await fetch(("/api/logout?time="+(new Date().getTime())), {
       method: "GET",
     }).then((res) => res.json());
 

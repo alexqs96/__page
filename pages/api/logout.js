@@ -17,7 +17,7 @@ export default function logOut(req, res) {
     sameSite: "strict",
     maxAge: 0,
     path: "/",
-    domain: process.env.PAGE_URL || "localhost",
+    domain: "https://ejercitolinces.vercel.app/",
   });
 
   res.setHeader("Set-Cookie", serialized);

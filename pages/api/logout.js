@@ -13,7 +13,7 @@ export default function logOut(req, res) {
 
   const serialized = serialize("pageUser", "", {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
+    secure: true,
     sameSite: "strict",
     maxAge: 0,
     path: "/",

@@ -11,7 +11,7 @@ export default function logOut(req, res) {
       });
   }
 
-  const serialized = serialize("pageUser", null, {
+  const serialized = serialize("pageUser", "", {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "strict",

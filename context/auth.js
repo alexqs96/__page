@@ -5,6 +5,7 @@ export const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [strapi, setStrapi] = useState(null);
 
   async function loadSession() {
     const data = await fetch("/api/me", {
@@ -26,7 +27,17 @@ export const AppProvider = ({ children }) => {
     setUser(data);
   }
 
+
+  async function strapiData() {
+    const data = await fetch("/api/strapi", {
+      method: "GET",
+    }).then((res) => res.json());
+
+    setStrapi(data);
+  }
+
   useEffect(() => {
+    strapiData();
     loadSession();
   }, []);
 
@@ -36,6 +47,7 @@ export const AppProvider = ({ children }) => {
         user,
         loading,
         logOut,
+        strapi
       }}
     >
       {children}

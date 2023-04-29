@@ -21,6 +21,8 @@ export const AppProvider = ({ children }) => {
       method: "GET",
     }).then((res) => res.json());
 
+    console.log("logout api: "+ data);
+
     setUser(data);
   }
 

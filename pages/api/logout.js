@@ -15,9 +15,9 @@ export default function logOut(req, res) {
     httpOnly: true,
     secure: true,
     sameSite: "strict",
-    maxAge: 0,
+    maxAge: -1,
     path: "/",
-    domain: process.env.PAGE_URL || "localhost"
+    domain: process.env.PAGE_URL
   });
 
   res.setHeader("Set-Cookie", serialized);

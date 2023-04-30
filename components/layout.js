@@ -21,7 +21,7 @@ const Header = () => {
         <nav className="flex items-center group relative w-max">
           <Image src={user.profile_pic} className="rounded-full" width={48} height={48} alt="User Pic" priority unoptimized/>
           
-          <div className="group-hover:flex hidden flex-col absolute top-12 bg-whitte dark:bg-black border dark:border-white/30 overflow-hidden right-0 rounded-md w-max">
+          <div className="group-hover:flex hidden flex-col absolute top-12 bg-white dark:bg-black border dark:border-white/30 overflow-hidden right-0 rounded-md w-max">
             <Link href="/profile" className="text-sm font-medium hover:bg-black/5 hover:dark:bg-white/20 px-5 py-2 cursor-pointer">Mi Perfil</Link>
             <span className="text-sm font-medium hover:bg-black/5 hover:dark:bg-white/20 px-5 py-2 cursor-pointer">Ajustes</span>
             <span onClick={() => logOut()} className="text-sm font-medium hover:bg-black/5 hover:dark:bg-white/20 px-5 py-2 cursor-pointer">Cerrar Sesion</span>

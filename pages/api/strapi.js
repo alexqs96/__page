@@ -8,5 +8,9 @@ export default async function strapi(req, res) {
     }
   }).then(res => res.json())
 
+  if (!strapi) {
+    return res.status(400).json(null)  
+  }
+
   return res.status(200).json(strapi)
 }

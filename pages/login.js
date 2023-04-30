@@ -4,9 +4,9 @@ import Image from "next/image";
 const Login = () => {
 
   
-  const emailRef = useRef();
-  const passwordRef = useRef();
-  const [message, setMessage] = useState(undefined)
+  const emailRef = useRef(null)
+  const passwordRef = useRef(null)
+  const [message, setMessage] = useState(null)
 
   const HandleLogin = async (e) =>{
     e.preventDefault();
@@ -23,20 +23,15 @@ const Login = () => {
     }).then(res => res.json())
 
     if (res.success) {
-      setMessage(res.message);
+      setMessage(res.message)
       location.replace("/")
     } else {
-      setMessage(res.message);
+      setMessage(res.message)
     }
   }
 
   return (
     <>
-    {
-      message?.welcome?
-      <h1 className="loading">{message.welcome}</h1>
-      :
-      <>
       <form className="flex flex-col gap-3 w-[300px] mx-auto border p-8 rounded-lg border-black/20 dark:border-white/20" method="post" onSubmit={HandleLogin}>
         <Image
           className="mx-auto"
@@ -67,14 +62,13 @@ const Login = () => {
         
         <button type="submit" className="p-2 transition rounded border border-black bg-black text-white hover:bg-white hover:text-black dark:bg-white dark:text-black hover:dark:bg-black hover:dark:text-white hover:dark:border-white font-semibold">Ingresar</button>
       </form>
+
       {
         message?
         <h6 className="msgError">{JSON.stringify(message)}</h6>
         :
         null
       }
-      </>
-    }
     </>
   )
 }

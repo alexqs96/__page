@@ -3,10 +3,10 @@ import Image from "next/image";
 
 const Register = () => {
 
-  const nameRef = useRef();
-  const emailRef = useRef();
-  const passwordRef = useRef();
-  const [message, setMessage] = useState(undefined)
+  const nameRef = useRef(null)
+  const emailRef = useRef(null)
+  const passwordRef = useRef(null)
+  const [message, setMessage] = useState(null)
 
   const handleSignUp = async (e) =>{
     e.preventDefault();
@@ -28,11 +28,6 @@ const Register = () => {
 
   return (
     <>
-    {
-      message?.welcome?
-      <h1 className="loading">{message.welcome}</h1>
-      :
-      <>
       <form className="flex flex-col gap-2 w-[300px] mx-auto border p-10 rounded-lg border-black/20 dark:border-white/20" method="post" onSubmit={handleSignUp}>
         <Image
           className="mx-auto"
@@ -78,8 +73,6 @@ const Register = () => {
         :
         null
       }
-      </>
-    }
     </>
   )
 }

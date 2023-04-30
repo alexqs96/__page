@@ -1,6 +1,6 @@
 export default async function strapi(req, res) {
 
-  const strapi = await fetch("https://strapi-production-0d4e.up.railway.app/api/empleados",{
+  const strapi = await fetch(process.env.STRAPI_URL,{
     method: "GET",
     headers: {
       'Authorization': `Bearer ${process.env.STRAPI}`,

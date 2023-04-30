@@ -37,35 +37,35 @@ const Login = () => {
       <h1 className="loading">{message.welcome}</h1>
       :
       <>
-      <form className="flex flex-col gap-2 w-[300px] mx-auto border p-10 rounded-lg border-black/20 dark:border-white/20" method="post" onSubmit={HandleLogin}>
+      <form className="flex flex-col gap-3 w-[300px] mx-auto border p-8 rounded-lg border-black/20 dark:border-white/20" method="post" onSubmit={HandleLogin}>
         <Image
           className="mx-auto"
           src="/img/logo.png"
-          width={80}
-          height={80}
+          width={100}
+          height={100}
           alt="Logo Linx"
           unoptimized
           priority
         />
-        <label>
+        <label className="text-black/80 dark:text-white/80">
           Email
           <input
-            className="w-full"
+            className="w-full border border-black/20 bg-white/5 dark:border-white/20 p-1.5 rounded"
             type="email"
             ref={emailRef}
           />
         </label>
 
-        <label>
+        <label className="text-black/80 dark:text-white/80">
           Contraseña
           <input
-            className="w-full"
+            className="w-full border border-black/20 bg-white/5 dark:border-white/20 p-1.5 rounded"
             type="password"
             ref={passwordRef}
           />
         </label>
         
-        <button type="submit" className="bg-black text-black dark:bg-white dark:text-black font-semibold">Ingresar</button>
+        <button type="submit" className="p-2 transition rounded border border-black bg-black text-white hover:bg-white hover:text-black dark:bg-white dark:text-black hover:dark:bg-black hover:dark:text-white hover:dark:border-white font-semibold">Ingresar</button>
       </form>
       {
         message?

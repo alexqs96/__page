@@ -125,3 +125,59 @@ export const WhatsappLogo = ({ size }) => (
     />
   </svg>
 );
+
+export const Moon = ({ size }) => (
+  <svg
+    fill="none"
+    height={size}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="1.5"
+    viewBox="0 0 24 24"
+    width={size}
+  >
+    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+  </svg>
+);
+
+export const Sun = ({ size }) => (
+  <svg
+    fill="none"
+    height={size}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="1.5"
+    viewBox="0 0 24 24"
+    width={size}
+  >
+    <circle cx="12" cy="12" r="5"></circle>
+    <path d="M12 1v2"></path>
+    <path d="M12 21v2"></path>
+    <path d="M4.22 4.22l1.42 1.42"></path>
+    <path d="M18.36 18.36l1.42 1.42"></path>
+    <path d="M1 12h2"></path>
+    <path d="M21 12h2"></path>
+    <path d="M4.22 19.78l1.42-1.42"></path>
+    <path d="M18.36 5.64l1.42-1.42"></path>
+  </svg>
+);
+
+export const LogOutIcon = ({ size }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path
+      d="M12 15L15 12M15 12L12 9M15 12H4M9 7.24859V7.2002C9 6.08009 9 5.51962 9.21799 5.0918C9.40973 4.71547 9.71547 4.40973 10.0918 4.21799C10.5196 4 11.0801 4 12.2002 4H16.8002C17.9203 4 18.4796 4 18.9074 4.21799C19.2837 4.40973 19.5905 4.71547 19.7822 5.0918C20 5.5192 20 6.07899 20 7.19691V16.8036C20 17.9215 20 18.4805 19.7822 18.9079C19.5905 19.2842 19.2837 19.5905 18.9074 19.7822C18.48 20 17.921 20 16.8031 20H12.1969C11.079 20 10.5192 20 10.0918 19.7822C9.71547 19.5905 9.40973 19.2839 9.21799 18.9076C9 18.4798 9 17.9201 9 16.8V16.75"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

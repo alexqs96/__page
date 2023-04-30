@@ -37,40 +37,40 @@ const Register = () => {
         <Image
           className="mx-auto"
           src="/img/logo.png"
-          width={80}
-          height={80}
+          width={100}
+          height={100}
           alt="Logo Linx"
           unoptimized
           priority
         />
-        <label>
+        <label className="text-black/80 dark:text-white/80">
           Nombre
           <input
-            className="w-full"
+            className="w-full border border-black/20 bg-white/5 dark:border-white/20 p-1.5 rounded"
             type="text"
             ref={nameRef}
           />
         </label>    
 
-        <label>
+        <label className="text-black/80 dark:text-white/80">
           Email
           <input
-            className="w-full"
+            className="w-full border border-black/20 bg-white/5 dark:border-white/20 p-1.5 rounded"
             type="email"
             ref={emailRef}
           />
         </label>
 
-        <label>
+        <label className="text-black/80 dark:text-white/80">
           Contraseña
           <input
-            className="w-full"
+            className="w-full border border-black/20 bg-white/5 dark:border-white/20 p-1.5 rounded"
             type="password"
             ref={passwordRef}
           />
         </label>
         
-        <button type="submit" className="bg-black text-black dark:bg-white dark:text-black font-semibold">Unirme</button>
+        <button type="submit" className="p-2 transition rounded border border-black bg-black text-white hover:bg-white hover:text-black dark:bg-white dark:text-black hover:dark:bg-black hover:dark:text-white hover:dark:border-white font-semibold">Unirme</button>
       </form>
       {
         message?

@@ -4,6 +4,7 @@ import useSWR from 'swr'
 import Image from 'next/image'
 import { ShoppingCart } from '@geist-ui/icons'
 import Link from 'next/link'
+import Loader from '@/components/loader'
 
 export default function Home() {
   const { data:strapi, error, isLoading } = useSWR('/api/strapi')
@@ -20,14 +21,16 @@ export default function Home() {
       <h2 className='text-3xl font-bold mb-3'>Productos</h2>
       {
         isLoading?
-        <p>Cargando..</p>
+        <Loader/>
         :
         <div className='flex flex-wrap gap-2 max-md:justify-between'>
           {
             strapi?.data?
             Children.toArray(
               strapi.data.map((e,index) => (
-                <Link href="/" className={(strapi.data.length-1 === index && strapi.data.length % 2 ? "max-md:mr-auto" : "")+' shadow-lg hover:shadow-xl border border-transparent dark:border-white/20 hover:dark:border-white/50 rounded transition-all duration-300 overflow-hidden max-sm:w-[42vw] w-48'}>
+                <Link
+                  href={"/"+e.id}
+                  className={(strapi.data.length-1 === index && strapi.data.length % 2 ? "max-md:mr-auto" : "")+' shadow-lg hover:shadow-xl border border-transparent dark:border-white/20 hover:dark:border-white/50 rounded transition-all duration-300 overflow-hidden max-sm:w-[42vw] w-48'}>
                   <Image
                     width={64}
                     height={64}

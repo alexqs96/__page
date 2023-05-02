@@ -1,6 +1,12 @@
 export default async function strapi(req, res) {
 
-  const strapi = await fetch(process.env.STRAPI_URL,{
+  let url = process.env.STRAPI_URL
+
+  if (req.query.producto) {
+    url = process.env.STRAPI_USER_URL+req.query.producto+"?populate=foto"
+  }
+
+  const strapi = await fetch(url,{
     method: "GET",
     headers: {
       'Authorization': `Bearer ${process.env.STRAPI}`,

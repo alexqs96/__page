@@ -40,8 +40,8 @@ export default function Home() {
                   <div className='p-4 max-md:p-2 flex flex-col gap-y-1.5 max-md:text-sm'>
                     <p className='capitalize font-medium'>{e.attributes.nombre}</p>
                     <p className='font-semibold'> $300 ARS <small className='line-through'>$200</small></p>
-                    <button className='p-2 flex justify-center gap-2 items-center flex-wrap bg-indigo-600 text-white rounded'>
-                      <ShoppingCart size={20} />
+                    <button className='p-2 pl-1 flex justify-center gap-2 items-center flex-wrap bg-indigo-600 text-white rounded'>
+                      <ShoppingCart size={16} />
                       <span className='font-semibold'>Comprar</span>
                     </button>
                   </div>

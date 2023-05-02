@@ -34,7 +34,7 @@ export default function Home() {
                     unoptimized
                     priority
                     className='w-full bg-white'
-                    src={e.attributes.foto? e.attributes.foto : "/img/apu_profile.png"}              
+                    src={e.attributes.foto.data? e.attributes.foto.data.attributes.url : "/img/apu_profile.png"}              
                     alt={"Foto de "+e.attributes.nombre}
                   />
                   <div className='p-4 max-md:p-2 flex flex-col gap-y-1.5 max-md:text-sm'>

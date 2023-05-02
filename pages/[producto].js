@@ -23,7 +23,7 @@ export default function ProductId (){
       :
         product?.data?
         <div className='my-5'>
-          <div className='flex max-md:items-center md:justify-between max-lg:flex-wrap gap-5'>
+          <div className='flex max-md:items-center md:justify-between max-lg:flex-wrap gap-5 w-full'>
             <Image
               width={64}
               height={64}
@@ -34,7 +34,7 @@ export default function ProductId (){
               alt={"Foto de "+product.data.attributes.nombre}
             />
 
-            <div className='w-full max-w-[600px] min-w-min flex flex-col gap-10'>
+            <div className='w-full lg:max-w-[600px] min-w-min flex flex-col gap-10'>
               <div className='flex justify-between items-center flex-wrap gap-2'>
                 <p className='capitalize font-medium text-5xl'>{product.data.attributes.nombre}</p>
 

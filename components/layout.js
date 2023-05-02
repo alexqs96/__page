@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "@/context/auth";
 import { useTheme } from "next-themes";
-import { LogOutIcon, Moon, Sun } from "./Icons";
+import { Moon, Sun } from "./Icons";
 
 const Header = () => {
   const { user, loading, logOut } = useContext(AppContext)

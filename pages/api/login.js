@@ -24,7 +24,7 @@ export default async function Login(req, res) {
     if (userFound?.user?.uid) {
       const user = await User.findOne({ id: userFound.user.uid });
 
-      const token = updateToken(user);
+      const token = await updateToken(user);
 
       res.setHeader("Set-Cookie", token);
 

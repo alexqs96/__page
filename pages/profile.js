@@ -4,7 +4,11 @@ import { useContext } from "react"
 
 const Profile = () => {
 
-  const { user } = useContext(AppContext)
+  const { user, loading } = useContext(AppContext)
+
+  if (loading) {
+    return <p>Cargando</p>
+  }
 
   return (
     <>

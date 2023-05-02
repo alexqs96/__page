@@ -1,10 +1,13 @@
-import { AppContext } from '@/context/auth'
 import Head from 'next/head'
-import { Children, useContext } from 'react'
+import { Children } from 'react'
+import useSWR from 'swr'
 
 export default function Home() {
+  const { data:strapi, error, isLoading } = useSWR('/api/strapi')
 
-  const { strapi } = useContext(AppContext)
+  if (error) {
+    <p>Hubo un error desde Strapi</p>
+  }
 
   return (
     <>
@@ -13,7 +16,7 @@ export default function Home() {
       </Head>
       <h2 className='text-3xl font-bold mb-3'>Productos</h2>
       {
-        !strapi?
+        isLoading?
         <p>Cargando..</p>
         :
         <div className='flex flex-col gap-2'>

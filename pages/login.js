@@ -2,7 +2,6 @@ import { useRef, useState, useContext } from "react";
 import Image from "next/image";
 
 const Login = () => {
-
   
   const emailRef = useRef(null)
   const passwordRef = useRef(null)
@@ -10,7 +9,7 @@ const Login = () => {
 
   const HandleLogin = async (e) =>{
     e.preventDefault();
-    
+
     const res = await fetch("/api/login", {
       method: "POST",
       headers: {

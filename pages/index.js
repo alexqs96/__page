@@ -33,7 +33,7 @@ export default function Home() {
                     height={64}
                     unoptimized
                     priority
-                    className='w-full bg-white'
+                    className='w-full bg-white aspect-square'
                     src={e.attributes.foto?.data? e.attributes.foto.data.attributes?.url : "/img/apu_profile.png"}              
                     alt={"Foto de "+e.attributes.nombre}
                   />

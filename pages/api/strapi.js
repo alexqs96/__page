@@ -7,6 +7,9 @@ export default async function strapi(req, res) {
       'Content-Type': 'application/json'
     }
   }).then(res => res.json())
+  .catch(err => {
+    return null
+  })
 
   if (!strapi) {
     return res.status(400).json(null)  

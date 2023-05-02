@@ -63,7 +63,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Header />
-      <main className="w-[90%] max-w-screen-2xl mx-auto">
+      <main className="w-[90%] max-w-screen-2xl mx-auto my-5">
       {children}
       </main>
       <Footer />

@@ -22,7 +22,7 @@ export default function ProductId (){
       <Loader />
       :
         product?.data?
-        <div className='my-5'>
+        <div>
           <div className='flex max-md:items-center md:justify-between max-lg:flex-wrap gap-5 w-full'>
             <Image
               width={64}
